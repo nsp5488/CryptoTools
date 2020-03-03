@@ -4,18 +4,7 @@ General tools for homework involving rotation ciphers.
 :language: Python3.7
 """
 
-
-def rot_n(word, n):
-    """
-    Rotates word by n
-    :param word: The plaintext
-    :param n: The rotation parameter (beta)
-    :return:
-    """
-    new = ""
-    for ch in word:
-        new += chr((ord(ch) + n))
-    return new
+from utilities import rot_n
 
 
 def main():
@@ -38,7 +27,6 @@ def main():
             if rot in s:
                 valid.append((e, rot, i))
                 print("word: ", e, " new: ", rot, " rotation: ", i)
-                #print(e, '$\\rightarrow$', rot, ' with rotation: ', i, '\\newline') # Provides LaTeX syntax
 
 
 if __name__ == "__main__":
