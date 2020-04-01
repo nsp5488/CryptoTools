@@ -54,3 +54,23 @@ def phi(a):
         b -= 1
     return c
 
+
+def sieve(n):
+    """
+    An efficient implementation of the Sieve of Eratosthenes to find all prime numbers up to a given input, :n:.
+    :param n: The upper bound to determine primes.
+    :return: A list of all prime integers from 2..n.
+    """
+    sieve_list = [True for i in range(n + 1)]
+    sieve_list[0] = False
+    sieve_list[1] = False
+    init = 2
+    while init * init <= n:
+        if sieve_list[init]:
+            for i in range(init * init, n + 1, init):
+                sieve_list[i] = False
+        init += 1
+
+    out = [i for i, e in enumerate(sieve_list) if e]
+
+    return out
