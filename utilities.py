@@ -2,7 +2,9 @@
 A collection of utility functions useful in solving cryptographic problems
 :author: Nick Patel nsp5488@rit.edu
 """
-import math, collections
+import collections
+import math
+
 
 def find_mult_inv(a):
     """
