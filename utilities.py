@@ -2,7 +2,7 @@
 A collection of utility functions useful in solving cryptographic problems
 :author: Nick Patel nsp5488@rit.edu
 """
-
+import math, collections
 
 def find_mult_inv(a):
     """
@@ -74,6 +74,8 @@ def sieve(n):
     out = [i for i, e in enumerate(sieve_list) if e]
 
     return out
+
+
 def print_alphabet_numerical():
     """
     Prints out a conversion table from uppercase English letters to integers in the range [0..25].
